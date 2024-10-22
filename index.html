@@ -163,5 +163,35 @@
             <p><strong>Total gasto:</strong> 1.300 € aprox</p>
         </section>
     </main>
+
+    <h1>Ejercicios de Inglés</h1>
+    <form id="quizForm">
+        <div>
+            <label>1. When I got an A on my test, I felt ___.</label>
+            <select id="q1">
+                <option value="miserable">Miserable</option>
+                <option value="joyful">Joyful</option>
+                <option value="confused">Confused</option>
+            </select>
+        </div>
+        <div>
+            <label>2. I felt ___ when I saw a big spider in my room.</label>
+            <select id="q2">
+                <option value="relaxed">Relaxed</option>
+                <option value="surprised">Surprised</option>
+                <option value="afraid">Afraid</option>
+            </select>
+        </div>
+        <button type="button" onclick="checkAnswers()">Submit</button>
+    </form>
+    <div id="results"></div>
+    <script>
+        function checkAnswers() {
+            let correct = 0;
+            if (document.getElementById('q1').value === 'joyful') correct++;
+            if (document.getElementById('q2').value === 'afraid') correct++;
+            document.getElementById('results').innerText = 'You got ' + correct + ' correct answers!';
+        }
+    </script>
 </body>
 </html>
